@@ -6,7 +6,7 @@ import stack from "../assets/stack.png";
 import envelope from "../assets/envelope.png";
 import "../styles/nav.css";
 
-export default class Nav() {
+export default class function Nav() {
     const location =  useLocation();
     const getNavPositionClass = () => {
       switch (location.pathname) {
@@ -21,7 +21,35 @@ export default class Nav() {
         default :
           return "";
       }
+    };
+
+    const getPageTitle = () => {
+      switch (location.pathname) {
+        case "/" :
+          return "ABOUT";
+        case "/skills" :
+          return "SKILLS";
+        case "/projects" :
+          return "PROJECTS";
+        case "/contact" :
+          return "CONTACT";
+        default :
+          return "";
+      }
+    };
+
+    const navPositionClass = getNavPositionClass();
+    const pageTitle = getPageTitle();
+
+    const isCurrentPage = (navClass) => {
+      return navClass === NavPositionClass;
     }
+
+    const renderNavLink = (to, imgSrc, altText, navClass) => {
+      const isCurrent = isCurrentPage(navClass);
+      const linkClass = isCurrent ? "nav-link current" : "nav-link"
+    }
+
   render() {
     return (
        <div>
