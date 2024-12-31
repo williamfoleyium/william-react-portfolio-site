@@ -6,7 +6,7 @@ import stack from "../assets/stack.png";
 import envelope from "../assets/envelope.png";
 import "../styles/nav.css";
 
-export default class function Nav() {
+export default function Nav() {
     const location =  useLocation();
     const getNavPositionClass = () => {
       switch (location.pathname) {
@@ -42,7 +42,7 @@ export default class function Nav() {
     const pageTitle = getPageTitle();
 
     const isCurrentPage = (navClass) => {
-      return navClass === NavPositionClass;
+      return navClass === navPositionClass;
     }
 
     const renderNavLink = (to, imgSrc, altText, navClass) => {
