@@ -6,8 +6,8 @@ const PlayerStats = () => {
         <div id="playerStats">
             <h1>JOHN DOE LEVEL 31</h1>
             <div id="playerStats__lines">
-                <span id="player__lines__thick"></span>
-                <span id="player__lines__thin"></span>
+                <span id="playerStats__lines__thick"></span>
+                <span id="playerStats__lines__thin"></span>
             </div>
             <h2>Fullstack Developer</h2>
         </div>
