@@ -40,33 +40,32 @@ export default class AboutMenu extends Component {
     return (
       <>
         <div className="menu">
-        {menuItems.map((item, index) => {
-          <AboutMenuItem 
-            key={index}
-            title={item}
-            active={activeMenuItem === index+1}
-            onClick={() => this.handleMenuItemClick(index+1)}
-          />
-        })}
-      </div>
-      <div className="sub-container">
-        <div className="icon-title-container">
-          <img src={activeMenuIcon} alt={activeMenuTitle} className="icon"/>
-          <h3>{activeMenuTitle}</h3>
+          {menuItems.map((item, index) => (
+            <AboutMenuItem
+              key={index}
+              title={item}
+              active={activeMenuItem === index+1}
+              onClick={() => this.handleMenuItemClick(index+1)}
+            />
+          ))}
         </div>
-        {subheadings.map((subheading, index) => {
-          <AboutSubheading 
-            key={index}
-            title={subheading.title}
-            content={subheading.content}
-            active={activeSubheading === index+1}
-            onClick={() => this.handleSubheadingClick(index+1)}
-            menuItem= {activeMenuItem}
-          />
-        })}
-      </div>
+        <div className="sub-container">
+          <div className="icon-title-container">
+            <img src={activeMenuIcon} alt={activeMenuTitle} className="icon"/>
+            <h3>{activeMenuTitle}</h3>
+          </div>
+          {subheadings.map((subheading, index) => (
+            <AboutSubheading
+              key={index}
+              title={subheading.title}
+              content={subheading.content}
+              active={activeSubheading === index+1}
+              onClick={() => this.handleSubheadingClick(index+1)}
+              menuItem={activeMenuItem}
+            />
+          ))}
+        </div>
       </>
-
-    )
+    );
   }
 }
