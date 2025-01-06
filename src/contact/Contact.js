@@ -1,7 +1,8 @@
 import React from 'react';
 import ContactMenu from './ContactMenu';
+import "../styles/contact.css";
 
-const contact = () => {
+const Contact = () => {
   return (
     <>
     <ContactMenu />
