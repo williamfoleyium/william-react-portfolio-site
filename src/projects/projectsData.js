@@ -31,7 +31,7 @@ const projects = {
     },
     3: {
         title: "Food Delivery App",
-        image: projecThree,
+        image: projectThree,
         description: (
             <>
                 <p>

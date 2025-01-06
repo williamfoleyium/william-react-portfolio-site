@@ -38,13 +38,13 @@ export default class projectsMenu extends Component {
         return (
             <div className="project-menu">
                 <div className="project-item-container">
-                    {project.Items.map((item, index) => (
+                    {projects.Items.map((item, index) => (
                         <div key={index} classname={classNames("project-item", {activeProject: activeProject === index + 1})} onClick={() => this.handleProjectClick(index + 1)}>
                             <h2 className="title">{item}</h2>
                         </div>
                     ))}
                 </div>
-                <div className="project-sub-container">{this.renderContent([projects[activeProject]])</div>
+                <div className="project-sub-container">{this.renderContent([projects[activeProject]])}</div>
             </div>
         )
   }
