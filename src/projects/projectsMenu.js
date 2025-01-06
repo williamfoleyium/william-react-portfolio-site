@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import project from "./projectsData";
+import "../styles/projectMenu.css";
 
 export default class projectsMenu extends Component {
     constructor(props) {
@@ -29,11 +32,16 @@ export default class projectsMenu extends Component {
     }
   
     render() {
+    const {activeProject} = this.state;
+    const projectItem = ["PROJECT ONE", "PROJECT TWO", "PROJECT THREE"];
+
     return (
         <div className="project-menu">
             <div className="project-item-container">
                 {project.Items.map((item, index) => (
-                    <div key={index} classname={classNames("project-item", {activeProject: activeProject === index})}></div>
+                    <div key={index} classname={classNames("project-item", {activeProject: activeProject === index + 1})} onClick={() => this.handleProjectClick(index + 1)}>
+                        <h2 className="title">{item}</h2>
+                    </div>
                 ))}
             </div>
         </div>
