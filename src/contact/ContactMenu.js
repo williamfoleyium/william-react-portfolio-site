@@ -48,7 +48,7 @@ export default function ContactMenu() {
         console.log("Email sent successfully", response.text);
         setFormData(initialState);
         setErrors({});
-        setIsSent(false);
+        setIsSent(true);
     })
     .catch((error) => {
         console.error("Email sending failed", error);
